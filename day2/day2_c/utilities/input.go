@@ -3,7 +3,7 @@ package utilities
 import (
 	"bufio"
 	"os"
-	"slices"
+	// "slices"
 	"strings"
 )
 
@@ -38,7 +38,11 @@ func ReadScanner(scanner *bufio.Scanner) (*Puzzle, error) {
 			first_line = false
 		}
 
-		words = append(words, strings.Split(line, ",")...)
+		for _, w := range(strings.Split(line, ",")) {
+			rev_w := reverse_string(w)
+			words = append(words, w)
+			words = append(words, rev_w)
+		}
 		break
 	}
 
@@ -53,14 +57,6 @@ func ReadScanner(scanner *bufio.Scanner) (*Puzzle, error) {
 		}
 
 		text = append(text, line)
-	}
-
-	for _, w := range words {
-		rev_w := reverse_string(w)
-
-		if !slices.Contains(words, rev_w) {
-			words = append(words, rev_w)
-		}
 	}
 
 	return &Puzzle{

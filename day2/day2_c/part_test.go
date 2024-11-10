@@ -51,3 +51,31 @@ TA`
 		t.Fatal("Expected answer to be", correct_answer, "but it was", solution)
 	}
 }
+
+func TestTrivial2(t *testing.T) {
+	small := `WORDS:THE,EE,ATA
+
+AHE
+ATA
+AHB
+AEC
+AED
+AEC
+AHB
+ATA
+AHO`
+
+	input, err := utilities.ReadString(small)
+
+	if err != nil {
+		t.Fatal("Run into problems while reading input. Problem", err)
+	}
+
+	solution := solution(input)
+
+	const correct_answer = 11
+
+	if solution != correct_answer {
+		t.Fatal("Expected answer to be", correct_answer, "but it was", solution)
+	}
+}
