@@ -6,25 +6,6 @@ import (
 	"strings"
 )
 
-func index(line string, substr string, start int) int {
-	for i := start; i <= len(line); i++ {
-		match := true
-
-		for j := 0; j < len(substr); j++ {
-			if line[(i+j+len(line))%len(line)] != substr[j] {
-				match = false
-				break
-			}
-		}
-
-		if match {
-			return i
-		}
-	}
-
-	return -1
-}
-
 func mark_runic_symbol_indices_horizontal(s, substr string, hit_indices []int) {
 
 	true_len := len(s)
