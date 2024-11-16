@@ -90,7 +90,7 @@ func main() {
 	logger.Println(strings.Join(input.Terrain, ""))
 
 	if err != nil {
-		logger.Fatalln("Run into problems while reading input. Problem", err)
+		logger.Fatalln("Ran into problems while reading input. Problem", err)
 	}
 
 	sol := solution(input)

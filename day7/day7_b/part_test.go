@@ -29,7 +29,7 @@ S+===
 	}
 
 	if err != nil {
-		t.Fatal("Run into problems while reading input. Problem", err)
+		t.Fatal("Ran into problems while reading input. Problem", err)
 	}
 
 	solution := solution(input)

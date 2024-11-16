@@ -39,7 +39,7 @@ func main() {
 	sol := solution(input)
 
 	if err != nil {
-		logger.Fatalln("Run into problems while reading input. Problem", err)
+		logger.Fatalln("Ran into problems while reading input. Problem", err)
 	}
 
 	logger.Println("Solution is", sol)

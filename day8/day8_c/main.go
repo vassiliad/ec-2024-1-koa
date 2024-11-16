@@ -67,7 +67,7 @@ func main() {
 	// logger.Println("Input was", input)
 
 	if err != nil {
-		logger.Fatalln("Run into problems while reading input. Problem", err)
+		logger.Fatalln("Ran into problems while reading input. Problem", err)
 	}
 
 	const TOTAL_MARBLE = 202400000
